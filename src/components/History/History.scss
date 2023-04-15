@@ -1,0 +1,82 @@
+@import "../../styles/media-queries";
+@import "../../styles/font-size";
+
+.history {
+  @include mobile-small-portrait {
+    grid-column: span 4;
+    grid-row: 6;
+  }
+  @include mobile-small-landscape {
+    grid-column: span 4;
+    grid-row: 5;
+  }
+  @include mobile-portrait {
+    grid-column: span 4;
+    grid-row: 6;
+  }
+  @include mobile-landscape {
+    grid-column: span 4;
+    grid-row: 5;
+  }
+  @include tablet-portrait {
+    grid-column: span 4;
+    grid-row: 6;
+  }
+  @include tablet-landscape {
+    grid-column: span 4;
+    grid-row: 5;
+  }
+  @include desktop {
+    grid-column: span 4;
+    grid-row: 5;
+  }
+  display: flex;
+  flex-direction: column;
+  .title {
+    font-family: "Frank Ruhl Libre", serif;
+    font-size: $headline4-font-size;
+    font-weight: 700;
+    margin-bottom: -5px;
+  }
+
+  .history-items-container {
+    margin-top: 32px;
+    font-size: $body1-font-size;
+
+    .history-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid #eee;
+      padding-bottom: 16px;
+      margin-bottom: 16px;
+    }
+
+    .actions {
+      display: flex;
+      gap: 16px;
+      align-items: center;
+      .action-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        background-color: #ddd;
+        cursor: pointer;
+        transition: background-color 0.2s ease;
+        border: none;
+        &:hover {
+          background-color: #eee;
+        }
+      }
+    }
+  }
+}
+
+.no-record {
+  font-size: $body1-font-size;
+  margin-top: 32px;
+  text-align: center;
+}
